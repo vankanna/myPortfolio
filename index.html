@@ -23,14 +23,18 @@
     </div>
     <div class="navbar__menu">
       <ul class="navbar__menu">
-        <li class="navbar__menu__item active">Home</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">My work</li>
-        <li class="navbar__menu__item">Testimonial</li>
-        <li class="navbar__menu__item">Contact</li>
+        <li class="navbar__menu__item active" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My work</li>
+        <li class="navbar__menu__item" data-link="#reference">Reference</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
     </div>
+  
+    <button class="navbar__toggle-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </nav>
 
   <section id="home">
@@ -157,7 +161,8 @@
   </section>
 
   <section id="work" class="section">
-    <h1>MY work</h1>
+    <div class="section__container">
+      <h1>MY work</h1>
     <h3>Projects</h3>
     <div class="work__categories">
       <button class="category__btn">
@@ -217,22 +222,25 @@
         </div>
       </a>
     </div>
+    </div>
   </section>
 
   <section id="reference" class="section">
-    <h1>Reference</h1>
-    <div class="reference">
-      <img src="/imgs/reference/Chirs.jpg" alt="people" class="reference__avatar">
-      <div class="reference__contact">
-        <p class="name">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quia eius consequuntur, aspernatur quas reiciendis at obcaecati maxime nam asperiores explicabo facere officia laborum facilis eos sapiente incidunt cupiditate ipsam?<a href="https://www.linkedin.com/in/maggiedauss/">
-          <br/>Chris Daood </a>/ Dean of Student - Waukesha County Technical College</p>
+    <div class="section__container">
+      <h1>Reference</h1>
+      <div class="reference">
+        <img src="/imgs/reference/Chirs.jpg" alt="people" class="reference__avatar">
+        <div class="reference__contact">
+          <p class="name">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quia eius consequuntur, aspernatur quas reiciendis at obcaecati maxime nam asperiores explicabo facere officia laborum facilis eos sapiente incidunt cupiditate ipsam?<a href="https://www.linkedin.com/in/maggiedauss/">
+            <br/>Chris Daood </a>/ Dean of Student - Waukesha County Technical College</p>
+        </div>
       </div>
-    </div>
-    <div class="reference">
-      <img src="/imgs/reference/Maggie.jpg" alt="people" class="reference__avatar">
-      <div class="reference__contact">
-        <p class="name"><a href="https://www.linkedin.com/in/maggiedauss/" target="_blank">
-          <br/>Meggie Dauss </a>/ Great Milwaukee Committee</p>
+      <div class="reference">
+        <img src="/imgs/reference/Maggie.jpg" alt="people" class="reference__avatar">
+        <div class="reference__contact">
+          <p class="name"><a href="https://www.linkedin.com/in/maggiedauss/" target="_blank">
+            <br/>Meggie Dauss </a>/ Great Milwaukee Committee</p>
+        </div>
       </div>
     </div>
   </section>
