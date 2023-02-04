@@ -17,9 +17,9 @@
 </head>
 <body>
   <nav id="navbar">
-    <div class="nabar__logo">    
+    <div class="navbar__logo">    
       <!-- <img class="nav__logo"src="imgs/logo.png" /> -->
-      <a href="#">Sumin</a>
+      <a href="#">SR</a>
     </div>
     <div class="navbar__menu">
       <ul class="navbar__menu">
@@ -44,7 +44,7 @@
     <button class="home__contact">Contact me</button>
   </section>
 
-  <section id="about">
+  <section id="about" class="section section__conatiner">
     <h1>About me</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nostrum tenetur voluptas laborum numquam distinctio, odio porro alias ratione? Dignissimos unde error fugiat ut a possimus ratione dolores ea aut?</p>
     <div class="about__majors"> 
@@ -52,7 +52,7 @@
         <div class="major__icon">
           <i class="fa-brands fa-react"></i>
         </div>
-        <div class="major__title">Front-end</div>
+        <h2 class="major__title">Front-end</h2>
         <div class="major__description">
           HTML, CSS, JavaScript,
           <br/> React, Vue, Web APIs
@@ -62,7 +62,7 @@
         <div class="major__icon">
           <i class="fa-solid fa-database"></i>
         </div>
-        <div class="major__title">Back-end</div>
+        <h2 class="major__title">Back-end</h2>
         <div class="major__description">
           JavaScript, .Net, Java
           <br/> 
@@ -71,23 +71,28 @@
     </div> 
     <div class="about__jobs">
       <div class="job">
-        <img src="imgs/jobs/NTSlogo.jpg" alt="nts" class="job__logo">
-        <p class="job__name">Korean IRS worker</p>
-        <p class="job__period">2018-2020</p>
+        <img src="imgs/jobs/NTSlogo.jpg" alt="nts" class="job__logo"/>
+        <div class="job__description">
+          <p class="job__name">Tax revenue officer</p>
+          <p class="job__role">Worked as a Tax Revenue officer for the Korean National Tax Service</p>
+          <p class="job__period">2017-2020</p>
+        </div>
       </div>
+    
     </div>
   
   </section>
 
-  <section id="skills">
-    <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>
-      Experience with all phases of the software life-cycle.
-      Passtionate for learning new technologies.
-      Capable of working with in a team enviroment and independently.
-      Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.
-    </p>
+  <section id="skills" class="section">
+    <div class="section__container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>
+        Experience with all phases of the software life-cycle.
+        Passtionate for learning new technologies.
+        Capable of working with in a team enviroment and independently.
+        Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.
+      </p>
     <div class="skillset">
       <div class="skillset__left">
         <h3 class="skillset__title">Skills</h3>
@@ -97,7 +102,7 @@
             <span>99%</span>
           </div>
           <div class="skill__bar">
-            <div class="skill_value"></div>
+            <div class="skill__value" style="width: 99%;"></div>
           </div>
         </div>
         <div class="skill">
@@ -106,7 +111,7 @@
             <span>99%</span>
           </div>
           <div class="skill__bar">
-            <div class="skill_value"></div>
+            <div class="skill__value" style="width: 99%;"></div>
           </div>
         </div>
         <div class="skill">
@@ -115,7 +120,7 @@
             <span>90%</span>
           </div>
           <div class="skill__bar">
-            <div class="skill_value"></div>
+            <div class="skill__value" style="width: 90%;"></div>
           </div>
         </div>
         <div class="skill">
@@ -124,7 +129,7 @@
             <span>95%</span>
           </div>
           <div class="skill__bar">
-            <div class="skill_value"></div>
+            <div class="skill__value"style="width: 95%;"></div>
           </div>
         </div>
       </div>
@@ -139,7 +144,7 @@
         </div>
         <div class="etc">
         <h3 class="skillset__title">ETC</h3>
-          <ul class="etc__lis">
+          <ul class="etc__list">
             <li><span>Git</span></li>
             <li><span>Scrum</span></li>
             <li><span>Math</span></li>
@@ -147,30 +152,65 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </section>
 
-  <section id="work">
+  <section id="work" class="section">
     <h1>MY work</h1>
     <h3>Projects</h3>
     <div class="work__categories">
       <button class="category__btn">
-        All<span calss="category__count">8</span>
+        All<span class="category__count">8</span>
       </button>
       <button class="category__btn">
-        Front-end<span calss="category__count">6</span>
+        Front-end<span class="category__count">6</span>
       </button>
       <button class="category__btn">
-        Back-end<span calss="category__count">2</span>
+        Back-end<span class="category__count">2</span>
       </button>
     </div>
 
-    <div class="work_projects">
+    <div class="work__projects">
       <a
         href="https://github.com/vankanna" 
         class="project"
         target="blank"
         >
-        <img calss="project__img" src="imgs/projects/" alt="project">
+        <img class="project__img" src="imgs/projects/racing.JPG" alt="project">
+        <div class="project__description">
+          <h3>Youtube site</h3>
+          <span>Clone coding with HTML and CSS</span>
+        </div>
+      </a>
+      <a
+        href="" 
+        class="project"
+        target="blank"
+        >
+        <img src="imgs/projects/racing.JPG" alt="race" class="project__img" >
+        <div class="project__description">
+          <h3>Youtube site</h3>
+          <span>Clone coding with HTML and CSS</span>
+        </div>
+      </a>
+      <a
+        href="" 
+        class="project"
+        target="blank"
+        >
+        <img class="project__img" src="imgs/projects/racing.JPG" alt="project">
+        <div class="project__description">
+          <h3>Youtube site</h3>
+          <span>Clone coding with HTML and CSS</span>
+        </div>
+      </a>
+      <a
+        href="https://github.com/vankanna" 
+        class="project"
+        target="blank"
+        >
+        <img class="project__img" src="imgs/projects/racing.JPG" alt="project">
         <div class="project__description">
           <h3>Youtube site</h3>
           <span>Clone coding with HTML and CSS</span>
@@ -179,7 +219,7 @@
     </div>
   </section>
 
-  <section id="reference">
+  <section id="reference" class="section">
     <h1>Referece</h1>
     <div class="reference">
       <img src="" alt="people" class="reference__avatar">
@@ -195,7 +235,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <h1 class="contact__title">Let's talk</h1>
     <h2 class="contact__email">su2rachwal@gmail.com</h2>
     <div class="contac__links">
