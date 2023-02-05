@@ -21,7 +21,7 @@
       <!-- <img class="nav__logo"src="imgs/logo.png" /> -->
       <a href="#">SR</a>
     </div>
-    <div class="navbar__menu">
+    
       <ul class="navbar__menu">
         <li class="navbar__menu__item active" data-link="#home">Home</li>
         <li class="navbar__menu__item" data-link="#about">About</li>
@@ -30,7 +30,7 @@
         <li class="navbar__menu__item" data-link="#reference">Reference</li>
         <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
-    </div>
+    
   
     <button class="navbar__toggle-btn">
       <i class="fa-solid fa-bars"></i>
@@ -38,14 +38,16 @@
   </nav>
 
   <section id="home">
-    <img 
-      src="imgs/sumin.jpg" 
-      alt="Sumin's profile photo" 
-      class="home__avatar"
-    />
-    <h1 class="home__title">Hello <br/> I'm Sumin Rachwal</h1>
-    <h2 class="home__description">A software Engineer currently residing in WI, USA</h2>
-    <button class="home__contact">Contact me</button>
+    <div class="home__container">
+      <img 
+        src="imgs/sumin.jpg" 
+        alt="Sumin's profile photo" 
+        class="home__avatar"
+      />
+      <h1 class="home__title">Hello <br/> I'm Sumin Rachwal</h1>
+      <h2 class="home__description">A software Engineer currently residing in WI, USA</h2>
+      <button class="home__contact">Contact me</button>
+    </div>
   </section>
 
   <section id="about" class="section section__conatiner">
@@ -165,13 +167,13 @@
       <h1>MY work</h1>
     <h3>Projects</h3>
     <div class="work__categories">
-      <button class="category__btn">
+      <button class="category__btn selected" data-filter="*">
         All<span class="category__count">8</span>
       </button>
-      <button class="category__btn">
+      <button class="category__btn" data-filter="front-end">
         Front-end<span class="category__count">6</span>
       </button>
-      <button class="category__btn">
+      <button class="category__btn" data-filter="back-end">
         Back-end<span class="category__count">2</span>
       </button>
     </div>
@@ -181,6 +183,7 @@
         href="https://github.com/vankanna" 
         class="project"
         target="blank"
+        data-type="front-end"
         >
         <img class="project__img" src="imgs/projects/racing.JPG" alt="project">
         <div class="project__description">
@@ -192,6 +195,7 @@
         href="" 
         class="project"
         target="blank"
+        data-type="back-end"
         >
         <img src="imgs/projects/racing.JPG" alt="race" class="project__img" >
         <div class="project__description">
@@ -261,5 +265,9 @@
     </p>
   </section>
 
+  <!-- Arrow up-->
+  <button class="arrow-up">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 </body>
 </html>
