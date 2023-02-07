@@ -1,12 +1,15 @@
 /* Global */
 
 :root {
+  
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-green: #66bb6a;
+  --color-light-green: #98ee99;
+  --color-light-green2: #e1ffb1;
+  --color-dark-green: #338a3e;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -43,7 +46,7 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'M PLUS 1 Code', sans-serif;
   cursor: default;
 }
 
@@ -112,7 +115,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-green);
   padding: 8px;
 }
 .navbar__menu {
@@ -134,9 +137,12 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-green);
   border-color: var(--color-white);
 }
 
@@ -151,32 +157,38 @@ p {
 
 /* Home */
 #home {
-  background:url('imgs/home_background.png') center/cover no-repeat;
+  background:url('imgs/home-background.png') center/cover no-repeat;
   padding: 40px;
-  padding-top: 120px;
+  padding-top: 150px;
   text-align: center;
+  padding-top: 250px;
+  padding-bottom: 200px;
 }
 
 .home__avatar {
   width: 250px;
   height: 300px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  border: 10px solid var(--color-green);
 }
 
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: var(--color-dark-green);
 }
 
 .home__contact {
-  color: var(--color-white);
+  color: var(--color-dark-green);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-dark-green);
   border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+  background-color: var(--color-light-green2);
 }
 
 /* Section common */
@@ -190,6 +202,14 @@ p {
   max-width: 1200px;
   margin: auto;
 }
+.section__title {
+  color: var(--color-dark-green);
+}
+
+.section__description {
+  color: var(--color-dark-grey);
+}
+
 
 /* About */
 .about__majors {
@@ -204,25 +224,26 @@ p {
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  color: var(--color-blue);
+  color: var(--color-green);
   margin-bottom: 16px;
-  border: 1px solid var(--color-blue);
+  border: 1px solid var(--color-light-green);
   border-radius: 50%;
   margin-bottom: 16px;
 
 }
 .major__icon i {
+  color: var(--color-orange);
   transition: all 300ms ease-in;
 }
 
 .major__icon:hover {
-  color: var(--color-pink);
+  color: var(--color-dark-green);
   transform: rotate(-30deg) scale(1.1);
 }
 
 
 .major__title, .major__description {
-  color: var(--color-dark-grey);
+  color: var(--color-dark-green);
 }
 
 .major__description {
@@ -241,7 +262,7 @@ p {
 }
 
 .job__name {
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
   font-weight: var(--weight-bold);
 }
 
@@ -259,7 +280,7 @@ p {
 
  /* Skill */
 #skills{
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-green2);
 }
 
 .skillset {
@@ -296,7 +317,7 @@ p {
 
 .skill__value {  
   height: 5px;
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-green);
 }
 
 .skillset__right {
@@ -314,25 +335,32 @@ p {
 }
 
 /* Work */
+.work__categories {
+  margin: 40px;
+}
+
 .category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
+  font-family: 'M PLUS 1 Code';
   padding: 8px 48px;
   position: relative;
+  
 }
 
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
-  color: var(white);
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
 }
 
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 6px;
+
 }
 
 
@@ -405,7 +433,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-orange);
+  color: var(--color-light-green);
 }
 
 .project__description h3:after {
@@ -458,12 +486,12 @@ p {
 }
 
 .reference__contact a {
-  color: var(--color-pink);
+  color: var(--color-dark-green);
 }
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-green);
 }
 
 .contac__links, .contact__email, .contact__rights, .contact__title{
@@ -482,7 +510,7 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   transition: all var(--animation-duration) ease-in;
-  color: var(--color-yellow)
+  color: var(--color-light-green)
 }
 .tools_list, .etc__list {
   padding-left: 0;
@@ -496,7 +524,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-pink);
+  background-color: var(--color-green);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -527,7 +555,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-green);
   }
   #navbar.navbar--dark{
     padding: 16px;
@@ -578,7 +606,7 @@ p {
   .job__description {
     width: 100%;
   }
-  
+
   .reference__avatar:nth-child(even)
   .reference__avatar:nth-child(odd) {
     margin: 0;
