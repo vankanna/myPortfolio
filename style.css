@@ -319,6 +319,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 
@@ -343,9 +344,9 @@ p {
   color: var(--color-white);
   display: inline-block;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -483,7 +484,9 @@ p {
   transition: all var(--animation-duration) ease-in;
   color: var(--color-yellow)
 }
-
+.tools_list, .etc__list {
+  padding-left: 0;
+}
 /* Scroll */
 .arrow-up {
   position: fixed;
@@ -507,8 +510,19 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {    
+  /* Font size */
+  --font-large: 30px;
+  --font-medium: 18px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
   #navbar {
     flex-direction: column;
@@ -527,14 +541,26 @@ p {
   .navbar__menu.open {
     display: block;
   }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
+  }
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
   }
   .project {
     flex-grow: 1;
@@ -542,9 +568,32 @@ p {
   .reference__avatar{
     width: 80px;
     height: 80px;
+    
   }
   .job__role{
     display: none;    
     flex-direction: column;
+  }
+
+  .job__description {
+    width: 100%;
+  }
+  
+  .reference__avatar:nth-child(even)
+  .reference__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .referece__contact {
+    order: 1;
+  }
+  .arrow-up {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
   }
 }
