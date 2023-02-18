@@ -39,26 +39,7 @@
 
 }
 /* Universal tags */
-.custom-shape-divider-bottom-1676007141 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: translate(0px, 280px) rotate(180deg);
-}
 
-.custom-shape-divider-bottom-1676007141 svg {
-  position: relative;
-  display: block;
-  width: calc(157% + 1.3px);
-  height: 149px;
-}
-
-.custom-shape-divider-bottom-1676007141 .shape-fill {
-  fill: #FFFFFF;
-}
 
 * {
   box-sizing: border-box;
