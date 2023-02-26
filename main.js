@@ -4,8 +4,7 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () =>{
-  console.log(window.scrollY);
-  console.log(`navbarHeight: ${navbarHeight}`);
+  
   if(window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
   } else {
@@ -96,3 +95,60 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: "smooth"});
 }
+
+//1. 모든 섹션 요소들과 메뉴아이템 들을 가지고 온다.
+//2. intersetctionObserver를 이용해서 모든 섹션요소들을 가져온다.
+//3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.about__majors
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#work',
+  '#reference',
+  '#contact',
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => 
+  document.querySelector(`[data-link="${id}"]`));
+
+  let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+}
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      //스크롤링이 아래로 되어서 페이지가 올라옴
+      if(entry.boundingClientRect.y < 0) {
+        selectedNavIndex= index + 1;
+      } else {
+        selectedNavIndex= index - 1;
+      }
+      
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (window.scrollY + window.innerHeight === document.body.clientHeight){
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
