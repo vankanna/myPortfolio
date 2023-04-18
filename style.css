@@ -119,6 +119,7 @@ p {
   background-color: var(--color-green);
   padding: 2px;
 }
+
 .navbar__menu {
   display: flex;
 
@@ -127,6 +128,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  margin-left: 20px;
 }
 
 .navbar__menu__item {
